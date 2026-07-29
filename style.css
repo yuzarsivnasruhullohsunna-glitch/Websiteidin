@@ -1,0 +1,327 @@
+body {
+    background-color: lightblue;
+    font-family: Arial;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    font-size: 20px;
+}
+button {
+    background-color: blue;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.kotak {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 20px;
+    text-align: center;
+}
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.kotak {
+    background: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+ul {
+    width: fit-content;
+    margin: 20px auto;
+    text-align: left;
+}
+
+li {
+    margin: 8px;
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.kotak {
+  height: 130px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+.kotak span {
+  font-size: 40px;
+}
+
+.kotak p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Animasi saat disentuh */
+.kotak:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+  background: #3498db;
+  color: white;
+}
+
+/* Efek saat ditekan di HP */
+.kotak:active {
+  transform: scale(0.95);
+}
+.header {
+  width: 100%;
+  height: 70px;
+  background: #3498db;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 25px;
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.profil-btn {
+  background: white;
+  color: #3498db;
+  text-decoration: none;
+
+  padding: 10px 15px;
+  border-radius: 20px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.profil-btn:hover {
+  transform: scale(1.08);
+}
+
+.profil-btn:active {
+  transform: scale(0.95);
+}
+.profil-card {
+    width: 320px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.foto {
+    width: 90px;
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+    background: #3498db;
+
+    color: white;
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profil-card h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.profil-card p {
+    text-align: center;
+}
+
+
+.profil-card ul {
+    line-height: 30px;
+}
+.foto {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profil-card button {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+.profil-card input,
+.profil-card textarea {
+
+    width: 90%;
+
+    padding: 12px;
+
+    margin: 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+}
+
+
+.profil-card textarea {
+
+    height: 100px;
+
+    resize: none;
+
+}
+
+
+.profil-card label {
+
+    display: block;
+
+    text-align: left;
+
+    margin-left: 15px;
+
+    font-weight: bold;
+
+}
+body {
+    background-image: url("blackhole.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/* ✨ Efek kaca futuristik */
+
+.kotak,
+.profil-card {
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+    0 0 20px rgba(0,200,255,0.5);
+
+    color: white;
+}
+
+
+/* 🌟 Judul bercahaya */
+
+h1,
+h2 {
+
+    text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #0088ff;
+
+}
+
+
+/* 🔵 Tombol neon */
+
+button {
+
+    box-shadow:
+    0 0 15px rgba(0,200,255,0.8);
+
+}
+
+
+/* 📱 Menu kotak tetap nyaman di HP */
+
+.menu .kotak {
+
+    background: rgba(255,255,255,0.18);
+
+    color: white;
+
+}
+
+
+/* Navigasi */
+
+nav {
+
+    background: rgba(0,0,0,0.4);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+nav a {
+
+    color: #00ffff;
+
+}
+body {
+    background: linear-gradient(135deg, #555, #999);
+    font-family: Arial;
+    text-align: center;
+    color: white;
+}
