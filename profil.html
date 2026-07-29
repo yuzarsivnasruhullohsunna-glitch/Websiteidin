@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Profil Saya</h1>
+
+    <a href="index.html" class="profil-btn">
+        🏠 Beranda
+    </a>
+</header>
+
+
+<div class="profil-card">
+
+    <div class="foto">
+        <img id="fotoProfil" src="foto/profil.jpg" alt="Foto Profil">
+    </div>
+
+   <input type="file" id="pilihFoto" accept="image/*" onchange="gantiFoto()">
+
+    <h2 id="nama">Yuzarsiv N.S</h2>
+
+    <p id="deskripsi">
+        Sedang belajar membuat website
+    </p>
+
+    <a href="edit-profil.html">
+    <button>
+        ✏️ Edit Profil
+    </button>
+</a>
+
+    <h2>Tentang Saya</h2>
+
+    <p>
+        Saya suka anak tk,saya suka anak tk,saya suka anak tk
+    </p>
+
+
+    <h2>Keahlian</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript Dasar</li>
+    </ul>
+
+</div>
+
+<script>
+
+function editProfil() {
+
+    let namaBaru = prompt("Masukkan nama baru:");
+
+    let deskripsiBaru = prompt("Masukkan deskripsi baru:");
+
+    if (namaBaru) {
+        localStorage.setItem("nama", namaBaru);
+    }
+
+    if (deskripsiBaru) {
+        localStorage.setItem("deskripsi", deskripsiBaru);
+    }
+
+    tampilkanProfil();
+}
+
+
+function tampilkanProfil() {
+
+    let nama = localStorage.getItem("nama");
+    let deskripsi = localStorage.getItem("deskripsi");
+
+
+    if (nama) {
+        document.getElementById("nama").innerHTML = nama;
+    }
+
+
+    if (deskripsi) {
+        document.getElementById("deskripsi").innerHTML = deskripsi;
+    }
+
+}
+
+
+function gantiFoto(){
+
+    let file = document.getElementById("pilihFoto").files[0];
+
+    if(file){
+
+        let reader = new FileReader();
+
+        reader.onload = function(e){
+
+            document.getElementById("fotoProfil").src = e.target.result;
+
+            localStorage.setItem("fotoProfil", e.target.result);
+
+        }
+
+        reader.readAsDataURL(file);
+    }
+
+}
+
+
+let fotoSimpan = localStorage.getItem("fotoProfil");
+
+if(fotoSimpan){
+
+    document.getElementById("fotoProfil").src = fotoSimpan;
+
+}
+
+
+tampilkanProfil();
+</script>
+
+</body>
+</html>

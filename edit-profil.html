@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Edit Profil</h1>
+
+    <a href="profil.html" class="profil-btn">
+        ↩️ Kembali
+    </a>
+</header>
+
+
+<div class="profil-card">
+
+    <h2>Ubah Data Profil</h2>
+
+    <label>Nama</label>
+    <input type="text" id="namaInput">
+
+
+    <label>Deskripsi</label>
+    <textarea id="deskripsiInput"></textarea>
+
+
+    <button onclick="simpanProfil()">
+        💾 Simpan
+    </button>
+
+</div>
+
+
+<script>
+
+function tampilkanData(){
+
+    let nama = localStorage.getItem("nama");
+    let deskripsi = localStorage.getItem("deskripsi");
+
+
+    if(nama){
+        document.getElementById("namaInput").value = nama;
+    }
+
+
+    if(deskripsi){
+        document.getElementById("deskripsiInput").value = deskripsi;
+    }
+
+}
+
+
+function simpanProfil(){
+
+    let nama =
+    document.getElementById("namaInput").value;
+
+
+    let deskripsi =
+    document.getElementById("deskripsiInput").value;
+
+
+    localStorage.setItem("nama", nama);
+
+    localStorage.setItem("deskripsi", deskripsi);
+
+
+    alert("Profil berhasil disimpan ✅");
+
+
+    window.location.href = "profil.html";
+
+}
+
+
+tampilkanData();
+
+</script>
+
+
+</body>
+</html>
